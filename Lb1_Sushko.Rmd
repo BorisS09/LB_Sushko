@@ -1,0 +1,50 @@
+---
+title: "Модуль 1. Базовий. Лабораторна робота №1. Створення основи типового Data Science-проєкту"
+date: "`r Sys.Date()`"
+output: 
+  # pdf_document:
+  #   highlight:tango
+  #   toc: yes
+  # word_document:
+  #   highlight: tango
+  #   toc: yes
+  html_notebook:
+      toc: yes # генерація змісту документу
+      toc_float: true
+      highlight: tango # колір підсвічування коду
+fontsize: 12pt # розмір шрифту
+header-includes:
+  \usepackage[T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[russian]{babel}
+editor_optionc:
+  chunck_output_type: conole # вивд результатів обчислення на консоль
+bibliography: references_lab.bib # ім'я файлу з БД бібліографчних посилань
+
+---
+$y = b0 * x + b1 + b2 * x^2$
+
+```{r}
+# Задаємо параметри функції
+b0 <- 2
+b1 <- 3
+b2 <- 1.57
+
+# Задаємо область визначення
+x <- seq(-1, 1, 0.1)
+y <- b0 + b1 * x + b2 * x^2
+
+plot(x, y,
+     type = "l",
+     col = "red",
+     main = "Графік функції",
+     xlab = "x",
+     ylab = "y"
+     )
+points(x, y,
+       col = "blue")
+
+```
+
+
+
